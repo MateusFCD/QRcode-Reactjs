@@ -1,4 +1,5 @@
-import { createTheme } from "@mui/material";
+import { createTheme, Box } from "@mui/material";
+import styled from "styled-components";
 
 export const theme = createTheme({
   components: {
@@ -6,9 +7,12 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           width: "400px",
-          margin: "auto",
-          padding: "4%",
+          margin: "10% auto",
+          padding: "2%",
           borderRadius: "15px",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
         },
       },
     },
@@ -23,3 +27,27 @@ export const theme = createTheme({
     },
   },
 });
+
+export const LayoutIMG = styled.div`
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin: auto;
+  }
+`;
+
+export const LayoutText = styled.div`
+  h2 {
+    font-size: 1.75rem;
+    font-family: "Outfit", sans-serif;
+  }
+  p {
+    color: hsl(218, 44%, 22%);
+    font-size: 1.3rem;
+    font-family: "Outfit", sans-serif;
+    line-height: 25px;
+  }
+`;
